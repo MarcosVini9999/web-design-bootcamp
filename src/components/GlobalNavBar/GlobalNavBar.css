@@ -16,5 +16,13 @@
   border-style: solid;
   border-width: 2px;
   background-color: #cee1d8;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 1px #252525;
+  text-decoration: none;
+  position: relative;
+  z-index: 100;
+}
+
+.buttonNavBar:hover {
+  box-shadow: 1px 1px 100px #252525;
+  transition: 1s ease;
 }

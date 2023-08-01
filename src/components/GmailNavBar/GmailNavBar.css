@@ -1,0 +1,141 @@
+.gmail-options > button,
+button.burger {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 72px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #585c62;
+  cursor: pointer;
+}
+
+.burger {
+  position: fixed;
+  z-index: 2;
+  top: 13%;
+  left: 0;
+  width: 72px;
+}
+
+.gmail-navbar {
+  height: 100%;
+  padding: 20px 24px 0;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  transition-property: translate, opacity, visibility;
+  transition-duration: 0.5s;
+  translate: -100% 0;
+  visibility: hidden;
+  opacity: 0;
+  height: 100%;
+}
+
+body.open .gmail-navbar {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+}
+
+.gmail-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 108px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.gmail-logo img {
+  width: 32px;
+}
+
+.gmail-logo span {
+  font-size: 18px;
+  color: #606468;
+}
+
+.gmail-search {
+  margin: 0 auto;
+  position: relative;
+  color: #888989;
+}
+
+.gmail-search span {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  translate: 0 -50%;
+  z-index: 1;
+  font-size: 20px;
+  color: inherit;
+}
+
+.gmail-search input {
+  width: 100%;
+  height: 44px;
+  padding-left: 46px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #eff1f2;
+  color: inherit;
+  outline: none;
+}
+
+.gmail-navbar nav {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.gmail-navbar nav img {
+  flex: 0 32px;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+}
+
+@media (width >=500px) {
+  .gmail-navbar {
+    translate: 0 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+    width: 100%;
+    height: 72px;
+    padding: 0 0 0 72px;
+  }
+  .gmail-logo {
+    margin-bottom: 0;
+  }
+  .gmail-search {
+    flex: 1 1 auto;
+  }
+}
+
+@media (width >= 550px) {
+  .gmail-search {
+    flex: 0 0 auto;
+  }
+}
+
+@media (width >= 600px) {
+  .gmail-navbar {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (width >= 650px) {
+  .gmail-search input {
+    width: 280px;
+  }
+}

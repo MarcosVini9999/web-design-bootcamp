@@ -10,6 +10,7 @@ import { Widget } from "../Widget/Widget";
 import { AlternativeLoginPage } from "../AlternativeLoginPage/AlternativeLoginPage";
 import { Footer } from "../Footer/Footer";
 import { AlternativeSideBar } from "../AlternativeSideBar/AlternativeSideBar";
+import { GmailNavBar } from "../GmailNavBar/GmailNavBar";
 
 export const Router = () => {
   return (
@@ -25,6 +26,7 @@ export const Router = () => {
           <Route path="alternative-login" element={<AlternativeLoginPage />} />
           <Route path="footer" element={<Footer />} />
           <Route path="alternative-sidebar" element={<AlternativeSideBar />} />
+          <Route path="gmail-NavBar" element={<GmailNavBar />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,116 @@
+.alternative-navbar :where(button) {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.alternative-navbar {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  background: #19191c;
+  color: #f9f9f9;
+  font-family: "Ubuntu";
+}
+
+.alternative-navbar-overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+body.open .alternative-navbar-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.alternative-navbar-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+}
+
+.alternative-navbar-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.alternative-navbar-menu {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  translate: -100% 0;
+  width: 270px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #000;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+body.open .alternative-navbar-menu {
+  translate: 0 0;
+  visibility: visible;
+}
+
+.alternative-navbar-menu > button {
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  padding: 0 8px;
+  transition: all 0.3s;
+}
+
+.alternative-navbar-menu > button.active {
+  color: inherit;
+}
+
+.alternative-navbar-menu > button.active:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media only screen and (min-width: 600px) {
+  .alternative-navbar {
+    justify-content: space-between;
+    padding: 0 0 0 16px;
+  }
+  .alternative-navbar-overlay {
+    display: none;
+  }
+  .alternative-navbar-burger {
+    display: none;
+  }
+  .alternative-navbar-menu {
+    position: static;
+    translate: 0 0;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+  }
+}

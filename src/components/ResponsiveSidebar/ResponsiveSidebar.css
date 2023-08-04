@@ -11,6 +11,7 @@ button.sidebar-button {
   height: 100%;
   background: #3949ab;
   transition: all 0.4s;
+  position: relative;
 }
 
 body.open .sidebar {
